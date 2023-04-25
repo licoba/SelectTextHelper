@@ -224,7 +224,7 @@ class MsgAdapter(private val mContext: Context, private val mList: List<MsgBean>
                 .setMagnifierShow(true) // 放大镜 default true
                 .setSelectTextLength(2)// 首次选中文本的长度 default 2
                 .setPopDelay(100)// 弹窗延迟时间 default 100毫秒
-                .setPopAnimationStyle(R.style.Base_Animation_AppCompat_Dialog)// 弹窗动画 default 无动画
+                .setPopAnimationStyle(androidx.appcompat.R.style.Base_Animation_AppCompat_Dialog)// 弹窗动画 default 无动画
                 .addItem(R.drawable.ic_msg_copy,
                     R.string.copy,
                     object : SelectTextHelper.Builder.onSeparateItemClickListener {
@@ -246,7 +246,7 @@ class MsgAdapter(private val mContext: Context, private val mList: List<MsgBean>
                     }).setPopSpanCount(5) // 设置操作弹窗每行个数 default 5
                 .setPopStyle(
                     R.drawable.shape_color_4c4c4c_radius_8 /*操作弹窗背*/,
-                    R.drawable.ic_arrow /*箭头图片*/
+                    com.xiaoguang.selecttext.R.drawable.ic_arrow /*箭头图片*/
                 ) // 设置操作弹窗背景色、箭头图片
                 .build()
             mSelectableTextHelper!!.setSelectListener(object : OnSelectListener {

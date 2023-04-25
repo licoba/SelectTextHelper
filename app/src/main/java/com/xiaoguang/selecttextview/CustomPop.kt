@@ -20,6 +20,7 @@ import com.xiaoguang.selecttext.SelectUtils
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import java.util.*
+import com.xiaoguang.selecttext.R
 
 /**
  * 聊天长按弹出
@@ -150,7 +151,7 @@ class CustomPop(
             popupWindow!!.setBackgroundDrawable(BitmapDrawable())
         }
         // 动画
-        popupWindow?.animationStyle = R.style.Base_Animation_AppCompat_Dialog
+        popupWindow?.animationStyle = androidx.appcompat.R.style.Base_Animation_AppCompat_Dialog
     }
 
     private fun updateListView() {

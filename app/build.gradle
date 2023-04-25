@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 32
 
     defaultConfig {
         applicationId "com.xiaoguang.selecttextview"
-        minSdk 14
-        targetSdk 30
+        minSdk 21
+        targetSdk 32
         versionCode 1
         versionName "1.0.1"
     }
@@ -21,19 +21,23 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 }
 
 dependencies {
-    implementation 'com.google.android.material:material:1.6.1'
 
-    // eventbus
-    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
+    implementation 'org.greenrobot:eventbus:3.3.1'
 
-    implementation project(path: ':selecttext')
+
+    api project(path: ':selecttext')
 }
